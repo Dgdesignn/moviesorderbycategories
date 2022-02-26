@@ -1,38 +1,74 @@
-.App {
-  text-align: center;
+.popular-movies {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 5% 20%;
+}
+img{ 
+  width: 100%;
+  height: 30vh;
+  object-fit: cover;
+  border-radius: 1rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2{
+  font-size: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.filter-container{
+  margin-bottom: 2rem;
+  margin: 5% 20%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.filter-container button{
+  margin-right: 2rem;
+  min-width: 5rem;
+  padding: .5rem 1rem;
+  border: none;
+  background-color: white;
+  color: dodgerblue;
+  border: 2px solid dodgerblue;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 2rem;
+  transition: all .12s ease-in-out;
+}
+
+.filter-container button.active{
+  background-color: dodgerblue;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+@media all and (max-width:760px) {
+  .popular-movies{
+    margin: 2rem;
+    margin-top: 5.5rem;
+  }
+  .filter-container button{
+    border:none;
+    margin-right: .5rem;
+    background-color: #e1f0ff;
+  }
+
+  .filter-container {
+    padding: 1rem 2rem;
+    box-shadow:1px 1px 6px rgba(0, 0,0, .2) ;
+    width: 100%;
+    position: fixed;
+    background-color: #fff;
+    top: 0;
+  }
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
+
+
+
+
+
+
+
